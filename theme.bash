@@ -7,12 +7,12 @@
 # More info about color codes in https://en.wikipedia.org/wiki/ANSI_escape_code
 
 
-PROMPT_CHAR=${POWERLINE_PROMPT_CHAR:=""}
+PROMPT_CHAR=${POWERLINE_PROMPT_CHAR:=""}
 POWERLINE_LEFT_SEPARATOR=" "
 POWERLINE_PROMPT="last_status user_info cwd scm"
 
 USER_INFO_SSH_CHAR=" "
-USER_INFO_PROMPT_COLOR="C B"
+USER_INFO_PROMPT_COLOR="C W B"
 
 SCM_GIT_CHAR=" "
 SCM_PROMPT_CLEAN=""
@@ -27,7 +27,7 @@ SCM_PROMPT_STAGED_COLOR="Y Bl"
 SCM_PROMPT_UNSTAGED_COLOR="R Bl"
 SCM_PROMPT_COLOR=${SCM_PROMPT_CLEAN_COLOR}
 
-CWD_PROMPT_COLOR="B C"
+CWD_PROMPT_COLOR="B Bl B"
 
 STATUS_PROMPT_COLOR="Bl R B"
 STATUS_PROMPT_ERROR="✘"
@@ -87,7 +87,7 @@ function __powerline_user_info_prompt {
 }
 
 function __powerline_cwd_prompt {
-  echo "\w|${CWD_PROMPT_COLOR}"
+  echo "\W|${CWD_PROMPT_COLOR}"
 }
 
 function __powerline_scm_prompt {
